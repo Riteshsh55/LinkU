@@ -11,14 +11,12 @@ function App() {
     <BrowserRouter>
       <Routes>
 
-        {/* Public Hub */}
         <Route path="/u/:slug" element={<PublicHub />} />
 
-        {/* Authentication */}
         <Route path="/signup" element={<SignupPage />} />
+
         <Route path="/login" element={<LoginPage />} />
 
-        {/* Dashboard */}
         <Route
           path="/dashboard"
           element={
@@ -30,7 +28,6 @@ function App() {
           }
         />
 
-        {/* First page / default */}
         <Route
           path="/"
           element={
@@ -42,7 +39,6 @@ function App() {
           }
         />
 
-        {/* Unknown URL */}
         <Route
           path="*"
           element={

@@ -43,17 +43,16 @@ const login = async () => {
         value={password}
         onChange={e => setPassword(e.target.value)}
       />
+	<button onClick={login} disabled={loading}>
+  {loading ? "Logging in..." : "Login"}
+</button>
 
-      <button onClick={login} disabled={loading}>
-        {loading ? "Logging in..." : "Login"}
-      </button>
-
-      <p>
-        Don&apos;t have an account?{" "}
-        <a href="/signup" style={{ color: "#0a7a3d" }}>
-          Sign up here
-        </a>
-      </p>
+<p>
+  Don&apos;t have an account?{" "}
+  <a href="/signup" style={{ color: "#0a7a3d" }}>
+    Sign Up
+  </a>
+</p>
     </div>
   );
 }
