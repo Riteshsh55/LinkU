@@ -74,6 +74,12 @@ function LoginPage() {
       <button onClick={login} disabled={loading}>
         {loading ? "Logging in..." : "Login"}
       </button>
+<p style={{ marginTop: "20px" }}>
+  Don't have an account?{" "}
+  <a href="/signup" style={{ color: "#00ff88" }}>
+    Sign Up
+  </a>
+</p>
     </div>
   );
 }

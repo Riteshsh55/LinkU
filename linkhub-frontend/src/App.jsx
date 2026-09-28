@@ -10,35 +10,53 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Public single link page */}
+
+        {/* Public Hub */}
         <Route path="/u/:slug" element={<PublicHub />} />
 
-        {/* Auth */}
-        <Route path="/login" element={<LoginPage />} />
+        {/* Authentication */}
         <Route path="/signup" element={<SignupPage />} />
+        <Route path="/login" element={<LoginPage />} />
 
-      <Route
-  path="/dashboard"
-  element={
-    localStorage.getItem("adminToken") ? (
-      <Dashboard />
-    ) : (
-      <Navigate to="/login" />
-    )
-  }
-/>
-
+        {/* Dashboard */}
+        <Route
+          path="/dashboard"
+          element={
+            isAdmin ? (
+              <Dashboard />
+            ) : (
+              <Navigate to="/login" replace />
+            )
+          }
         />
 
-        {/* Default */}
+        {/* First page / default */}
+        <Route
+          path="/"
+          element={
+            isAdmin ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <Navigate to="/signup" replace />
+            )
+          }
+        />
+
+        {/* Unknown URL */}
         <Route
           path="*"
-          element={<Navigate to={isAdmin ? "/dashboard" : "/login"} />}
+          element={
+            isAdmin ? (
+              <Navigate to="/dashboard" replace />
+            ) : (
+              <Navigate to="/signup" replace />
+            )
+          }
         />
+
       </Routes>
     </BrowserRouter>
   );
 }
 
 export default App;
-
