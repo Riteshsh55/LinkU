@@ -1,0 +1,95 @@
+/* GLOBAL */
+body {
+  margin: 0;
+  padding: 0;
+  background: #000000;
+  color: #ffffff;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.App {
+  background: #000000;
+  color: #ffffff;
+  min-height: 100vh;
+  padding: 40px;
+}
+
+/* HEADINGS */
+h1, h2, h3 {
+  color: #00ff88;
+  margin-bottom: 10px;
+}
+
+/* TEXT */
+p, span, div {
+  color: #ffffff;
+}
+
+/* INPUTS */
+input {
+  padding: 10px;
+  width: 280px;
+  background: #0b0b0b;
+  color: #ffffff;
+  border: 2px solid #00ff88;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+input::placeholder {
+  color: #aaaaaa;
+}
+
+input:focus {
+  border-color: #00ffaa;
+  box-shadow: 0 0 5px #00ff88;
+}
+
+/* BUTTONS */
+button {
+  padding: 10px 22px;
+  background: #00ff88;
+  color: #000000;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+button:hover {
+  background: #00ffaa;
+}
+
+button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* LINKS */
+a {
+  color: #00ff88;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* HORIZONTAL LINE */
+hr {
+  border: 0;
+  border-top: 1px solid #00ff88;
+  margin: 20px 0;
+}
+
+/* CARD SECTIONS */
+.card {
+  background: #0b0b0b;
+  border: 1px solid #00ff88;
+  border-radius: 8px;
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
